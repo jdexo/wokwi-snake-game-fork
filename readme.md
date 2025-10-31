@@ -8,5 +8,8 @@ A játék akkor ér véget, ha az egyik falnak vagy saját magának ütközik a 
 Akármelyik gomb megnyomásával visszaállíthatjuk a játékot a kezdő értékekre, majd megint egy gombnyomással indíthatjuk a játékot.
 
 =====Fork=====
+v2.0
+- No borders
+
 v1.1
 - Add levels 

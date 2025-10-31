@@ -153,15 +153,27 @@ bool moveSnake() {
   switch(dir) {
     case LEFT:
       x -= 1;
+      if (x < 0) {
+          x = MAP_SIZE_X - 1;
+      }
       break;
     case UP:
       y -= 1;
+      if (y < 0) {
+          y = MAP_SIZE_Y - 1;
+      }
       break;
     case RIGHT:
       x += 1;
+      if (x == MAP_SIZE_X) {
+          x = 0;
+      }
       break;
     case DOWN:
       y += 1;
+      if (y == MAP_SIZE_Y ) {
+          y = 0;
+      }
       break;
   }
 
@@ -216,7 +228,7 @@ bool collisionCheck(int8_t x, int8_t y) {
   for(int i = 1; i < snake_length; i++) {
     if(x == snake[i][0] && y == snake[i][1]) return true;
   }
-  if(x < 0 || y < 0 || x >= MAP_SIZE_X || y >= MAP_SIZE_Y) return true;
+  //if(x < 0 || y < 0 || x >= MAP_SIZE_X || y >= MAP_SIZE_Y) return true;
   return false;
 }
 
